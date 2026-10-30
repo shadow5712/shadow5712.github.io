@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="الظل: موقع عربي مجاني لتعليم الأمن السيبراني للناس العاديين. دروس، اختبارات، تحديات، وفاحص لقوة كلمات المرور.">
+<meta name="robots" content="index,follow">
+<title>الظل | تعلّم الأمن السيبراني من الصفر</title>
+<style>
+:root{color-scheme:dark;--bg:#000;--card:#0d0d0d;--text:#ededed;--muted:#9a9a9a;--accent:#e6e6e6;--accent-t:#000;--line:#242424;--bad:#ff6b5e;--warn:#f2b83d;--good:#4ade80;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#000;--card:#0d0d0d;--text:#ededed;--muted:#9a9a9a;--accent:#e6e6e6;--accent-t:#000;--line:#242424;--bad:#ff6b5e;--warn:#f2b83d;--good:#4ade80}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#000;--card:#0d0d0d;--text:#ededed;--muted:#9a9a9a;--accent:#e6e6e6;--accent-t:#000;--line:#242424;--bad:#ff6b5e;--warn:#f2b83d;--good:#4ade80}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",system-ui,sans-serif;line-height:1.8}
+main{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+.hero{text-align:center;padding:28px 8px 12px}
+.hero .ic{line-height:0}.hero .ic svg{width:190px;max-width:70%;height:auto}
+h1{margin:6px 0;font-size:28px}
+.hero p{color:var(--muted);margin:6px 0 16px}
+h2{font-size:21px;margin:34px 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:10px 18px;background:var(--accent);color:var(--accent-t);font-weight:700}
+button.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+input[type=text]{width:100%;font:inherit;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);direction:ltr;text-align:left}
+.bar{height:10px;border-radius:6px;background:var(--line);margin:12px 0 6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--bad);transition:width .25s,background .25s}
+.muted{color:var(--muted);font-size:14px}
+details{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details ul{margin:8px 0 0;padding-inline-start:20px}
+.opts{display:flex;gap:10px;margin-top:12px}
+.opts button{flex:1}
+.fb{margin-top:12px;padding:10px 12px;border-radius:12px;border:1px solid var(--line)}
+.ok{color:var(--good)}.no{color:var(--bad)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;position:relative;padding:12px 52px 12px 12px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+.steps li::before{content:counter(s);position:absolute;right:12px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-t);display:grid;place-items:center;font-weight:700}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0 0}
+.badge{padding:5px 12px;border-radius:20px;border:1px solid var(--line);font-size:13px;color:var(--muted)}
+.badge.on{background:var(--accent);color:var(--accent-t);border-color:var(--accent);font-weight:700}
+.row{display:flex;gap:8px;margin-top:10px}.row input{flex:1}
+.opts.col{flex-direction:column}.opts.col button{direction:ltr}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+<div class="ic"><svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="شخص بلبس أسود وقفازات وكابوشة جالس قدام كمبيوتر">
+<rect x="126" y="34" width="68" height="50" rx="4" fill="#050505" stroke="#666" stroke-width="2"/>
+<rect x="134" y="43" width="34" height="3" rx="1.5" fill="#4ade80" opacity=".85"/><rect x="134" y="52" width="46" height="3" rx="1.5" fill="#4ade80" opacity=".6"/><rect x="134" y="61" width="26" height="3" rx="1.5" fill="#4ade80" opacity=".85"/><rect x="134" y="70" width="40" height="3" rx="1.5" fill="#4ade80" opacity=".6"/>
+<rect x="156" y="84" width="8" height="24" fill="#444"/>
+<rect x="48" y="62" width="9" height="50" rx="4.5" fill="#262626" stroke="#666" stroke-width="1.2"/>
+<rect x="58" y="96" width="48" height="15" rx="7.5" fill="#12161c" stroke="#555" stroke-width="1.5"/>
+<rect x="94" y="100" width="14" height="38" rx="7" fill="#12161c" stroke="#555" stroke-width="1.5"/>
+<path d="M90 136h26q5 0 5 5v3H90Z" fill="#0a0a0a" stroke="#666" stroke-width="1.5"/>
+<path d="M60 100V76Q60 62 75 62H93Q108 62 108 76V100Z" fill="#181818" stroke="#666" stroke-width="1.5"/>
+<path d="M72 92Q84 98 98 92" fill="none" stroke="#444" stroke-width="1.5"/>
+<circle cx="86" cy="46" r="23" fill="#181818" stroke="#666" stroke-width="1.5"/>
+<ellipse cx="98" cy="50" rx="10" ry="13" fill="#b98260"/>
+<path d="M107 49l5 5-5 2z" fill="#b98260"/>
+<ellipse cx="98" cy="50" rx="10" ry="13" fill="#4ade80" opacity=".12"/>
+<circle cx="103" cy="47" r="1.4" fill="#111"/>
+<path d="M89 43Q96 32 108 40L108 44Q100 38 91 47Z" fill="#4a3426"/>
+<path d="M88 36Q100 27 108 39Q113 52 104 63" fill="none" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="98" y1="66" x2="97" y2="80" stroke="#aaa" stroke-width="1.2"/><line x1="103" y1="66" x2="103" y2="78" stroke="#aaa" stroke-width="1.2"/>
+<rect x="0" y="112" width="200" height="5" fill="#242424"/>
+<rect x="112" y="107" width="40" height="5" rx="2.5" fill="#555"/>
+<line x1="94" y1="78" x2="120" y2="103" stroke="#666" stroke-width="12" stroke-linecap="round"/>
+<line x1="94" y1="78" x2="120" y2="103" stroke="#181818" stroke-width="9" stroke-linecap="round"/>
+<circle cx="124" cy="105" r="6.5" fill="#0d0d0d" stroke="#999" stroke-width="1.5"/>
+<rect x="122" y="104" width="14" height="5" rx="2.5" fill="#0d0d0d" stroke="#999" stroke-width="1.2"/>
+</svg></div>
+<h1>الظل</h1>
+<p>تعلّم الأمن السيبراني من الصفر، بدون تعقيد وبدون خبرة سابقة.</p>
+<button onclick="document.getElementById('pw').scrollIntoView({behavior:'smooth'})">ابدأ من هنا</button>
+</section>
+<div class="badges" id="bd"></div>
+
+<h2 id="pw">١. افحص قوة كلمة المرور</h2>
+<div class="card">
+<input type="text" id="pwi" placeholder="اكتب كلمة مرور للتجربة" autocomplete="off" spellcheck="false">
+<div class="bar"><i id="pwb"></i></div>
+<div id="pwr"><b>—</b></div>
+<div class="muted" id="pwt">لا يُرسل أي شيء لأي مكان، الفحص كله داخل جهازك. لا تكتب كلمة مرورك الحقيقية للاحتياط.</div>
+</div>
+
+<h2>٢. دروس سريعة</h2>
+<details><summary>🎣 التصيّد (Phishing)</summary>
+<ul><li>رسالة تدّعي أنها من بنك أو شركة وتطلب منك الدخول بسرعة.</li><li>تأكد من عنوان المرسل والرابط الحقيقي قبل الضغط.</li><li>الجهات الحقيقية لا تطلب كلمة مرورك أو رمز التحقق أبداً.</li></ul></details>
+<details><summary>🔑 كلمات المرور</summary>
+<ul><li>الطول أهم من التعقيد: عبارة من ٤ كلمات عشوائية أقوى من كلمة قصيرة برموز.</li><li>لا تكرر نفس كلمة المرور في أكثر من حساب.</li><li>استخدم مدير كلمات مرور ليحفظها عنك.</li></ul></details>
+<details><summary>📱 التحقق بخطوتين (2FA)</summary>
+<ul><li>حتى لو سُرقت كلمة مرورك، يبقى الحساب محمياً برمز ثانٍ.</li><li>الأفضل تطبيق مصادقة أو مفتاح أمان، والرسائل النصية أقل أماناً.</li><li>فعّله أولاً على الإيميل والبنك.</li></ul></details>
+<details><summary>📶 شبكات الواي فاي العامة</summary>
+<ul><li>تجنب الدخول لحساباتك الحساسة على شبكة مفتوحة.</li><li>تأكد من اسم الشبكة الحقيقي مع المكان، فقد تكون هناك شبكة مزيفة بنفس الاسم.</li><li>استخدم بيانات الجوال أو VPN موثوق عند الحاجة.</li></ul></details>
+<details><summary>🔄 التحديثات</summary>
+<ul><li>أغلب الاختراقات تستغل ثغرات معروفة وتم إصلاحها بتحديث.</li><li>فعّل التحديث التلقائي للهاتف والمتصفح والتطبيقات.</li></ul></details>
+
+<details><summary>🕶️ الخصوصية على الإنترنت</summary>
+<ul><li>كل ما تنشره عن نفسك (موقعك، عملك، صور بيتك) يساعد المحتال على معرفتك.</li><li>راجع إعدادات الخصوصية في تطبيقاتك وأغلق الوصول غير الضروري للموقع والكاميرا.</li><li>فكّر قبل أن تضغط «موافق» على أي تطبيق جديد.</li></ul></details>
+<details><summary>📲 حماية هاتفك</summary>
+<ul><li>ضع قفل شاشة قوياً، ورقماً من ٦ خانات أو أكثر.</li><li>نزّل التطبيقات من المتجر الرسمي فقط.</li><li>فعّل خاصية «العثور على جهازي» لتتبعه أو مسحه عند الضياع.</li></ul></details>
+<details><summary>💸 الاحتيال المالي</summary>
+<ul><li>«ربحت جائزة» أو «استثمر واربح الضعف» غالباً نصب.</li><li>لا تحوّل مالاً لشخص لا تعرفه تحت أي ضغط أو استعجال.</li><li>إذا شككت، اتصل بالجهة من رقمها الرسمي الذي تعرفه أنت.</li></ul></details>
+
+<h2>٣. اختبر نفسك</h2>
+<div class="card" id="quiz"></div>
+
+<h2>٤. تحديات</h2>
+<div class="card"><b>تحدي ١: فك الشيفرة</b>
+<p class="muted">شيفرة قيصر: كل حرف تحرك ٣ مواضع للأمام. فك الكلمة <span dir="ltr"><b>ORJLQ</b></span> (إنجليزي). تلميح: رجّع كل حرف ٣ للخلف، O ترجع إلى L.</p>
+<div class="row"><input type="text" id="ci" placeholder="الإجابة" autocomplete="off"><button id="cb">تحقق</button></div><div id="cr" class="muted"></div></div>
+<div class="card"><b>تحدي ٢: أي عنوان مزيف؟</b>
+<p class="muted">وصلتك رسالة باسم PayPal. أي عنوان مرسل فيها هو المزيف؟</p>
+<div class="opts col"><button class="ghost" data-m="0">support@paypal.com</button><button class="ghost" data-m="1">support@paypa1.com</button><button class="ghost" data-m="2">service@paypal.com</button></div><div id="mr" class="muted" style="margin-top:10px"></div></div>
+
+<h2>٥. مسار التعلم</h2>
+<ol class="steps">
+<li><b>الأساسيات:</b> تعلم كيف تعمل الشبكات والإنترنت، وطبّق دروس الأعلى على حساباتك.</li>
+<li><b>لينكس:</b> تعلم أوامر الطرفية الأساسية، فهي لغة هذا المجال.</li>
+<li><b>بايثون:</b> لغة سهلة تفيدك في الأتمتة وفهم الأدوات.</li>
+<li><b>تدريب قانوني:</b> منصات مثل TryHackMe وPicoCTF وOverTheWire مصممة للتعلم الآمن.</li>
+<li><b>الأخلاقيات:</b> مارس فقط على أنظمة تملكها أو معك إذن مكتوب عليها.</li>
+</ol>
+
+<h2>من نحن</h2>
+<div class="card">«الظل» موقع عربي مجاني لتعليم الأمن السيبراني للناس العاديين. هدفنا أن يعرف كل شخص كيف يحمي نفسه وحساباته. المحتوى للتوعية والدفاع فقط.<br><br>للتواصل والاقتراحات، راسلنا على إنستغرام: <a href="https://www.instagram.com/s._.opendoor" target="_blank" rel="noopener" dir="ltr" style="color:var(--text);font-weight:700">@s._.opendoor</a></div>
+
+<footer>الهدف من هذا الموقع التعلم والدفاع فقط. اختبر فقط ما تملكه أو أُذن لك به.</footer>
+</main>
+
+<script>
+(function(){
+var i=document.getElementById('pwi'),b=document.getElementById('pwb'),r=document.getElementById('pwr'),t=document.getElementById('pwt');
+var common=['123456','password','qwerty','111111','123456789','12345678','abc123','admin','iloveyou','000000'];
+function check(){
+var p=i.value;
+if(!p){b.style.width='0';r.innerHTML='<b>—</b>';return}
+var pool=0;if(/[a-z]/.test(p))pool+=26;if(/[A-Z]/.test(p))pool+=26;if(/\d/.test(p))pool+=10;if(/[^A-Za-z0-9]/.test(p))pool+=32;
+var bits=p.length*Math.log2(pool||1);
+if(common.indexOf(p.toLowerCase())>-1||/^(.)\1+$/.test(p))bits=Math.min(bits,10);
+var lvl,col,w;
+if(bits<28){lvl='ضعيفة جداً';col='var(--bad)';w=15}
+else if(bits<45){lvl='ضعيفة';col='var(--bad)';w=35}
+else if(bits<65){lvl='متوسطة';col='var(--warn)';w=60}
+else{lvl='قوية';col='var(--good)';w=100}
+b.style.width=w+'%';b.style.background=col;if(w===100&&window.award)window.award('pw');
+r.innerHTML='<b style="color:'+col+'">'+lvl+'</b>';
+var tip=[];if(p.length<12)tip.push('اجعلها ١٢ حرفاً أو أكثر');
+if(common.indexOf(p.toLowerCase())>-1)tip.push('هذه من أشهر كلمات المرور المسروقة');
+t.textContent=tip.length?tip.join('، '):'ممتاز. تذكر ألا تكررها في حسابات أخرى.';
+}
+i.addEventListener('input',check);
+
+var Q=[
+{m:'وصلتك رسالة: «حسابك البنكي سيُجمّد خلال ساعة، اضغط الرابط وأدخل بياناتك فوراً».',a:false,e:'تصيّد. الاستعجال والتهديد علامتان كلاسيكيتان، والبنوك لا تطلب بياناتك عبر رابط.'},
+{m:'تطبيق مصادقة يعرض رمزاً، ويتصل بك شخص يقول «أنا من الدعم، أعطني الرمز».',a:false,e:'احتيال. رمز التحقق لك وحدك ولا تعطيه لأحد مهما كان.'},
+{m:'تلقيت إشعار تسجيل دخول من جهاز جديد بعد أن سجلت دخولك أنت بنفسك قبل دقيقة، وفتحت التطبيق الرسمي مباشرة للتأكد.',a:true,e:'سليم. الصواب أنك فتحت التطبيق بنفسك ولم تضغط رابطاً في الرسالة.'},
+{m:'موقع يبدأ بـ https وتظهر فيه علامة القفل، إذن هو آمن بالتأكيد.',a:false,e:'غير صحيح. القفل يعني أن الاتصال مشفر فقط، ومواقع التصيّد قد تستخدمه أيضاً.'},
+{m:'استخدام عبارة من أربع كلمات عشوائية طويلة كلمة مرور.',a:true,e:'صحيح. الطول وعشوائية الكلمات يجعلانها قوية وسهلة التذكر.'}
+];
+var n=0,s=0,q=document.getElementById('quiz');
+function show(){
+if(n>=Q.length){if(s>=4&&window.award)window.award('quiz');q.innerHTML='<b>نتيجتك: '+s+' من '+Q.length+'</b><p class="muted">'+(s>=4?'ممتاز، عينك فاتحة.':'جيد، أعد المحاولة لتثبّت المعلومات.')+'</p><button onclick="window.__rq()">إعادة</button>';return}
+var c=Q[n];
+q.innerHTML='<div class="muted">سؤال '+(n+1)+' من '+Q.length+'</div><p>'+c.m+'</p><div class="opts"><button id="y">سليم ✅</button><button class="ghost" id="x">خطر ⚠️</button></div><div id="fb"></div>';
+document.getElementById('y').onclick=function(){ans(true)};
+document.getElementById('x').onclick=function(){ans(false)};
+}
+function ans(v){
+var c=Q[n],ok=(v===c.a);if(ok)s++;
+document.getElementById('y').disabled=true;document.getElementById('x').disabled=true;
+document.getElementById('fb').innerHTML='<div class="fb"><b class="'+(ok?'ok':'no')+'">'+(ok?'إجابة صحيحة':'إجابة خاطئة')+'</b><br>'+c.e+'<br><br><button id="nx">'+(n+1<Q.length?'التالي':'النتيجة')+'</button></div>';
+document.getElementById('nx').onclick=function(){n++;show()};
+}
+window.__rq=function(){n=0;s=0;show()};
+show();
+})();
+</script>
+<script>
+(function(){
+var L=[['pw','كلمة قوية'],['quiz','صياد التصيّد'],['cipher','فاك الشيفرة'],['mail','عين الصقر']],got={};
+try{got=JSON.parse(localStorage.getItem('zill_b')||'{}')||{}}catch(e){got={}}
+var bd=document.getElementById('bd');
+function draw(){var n=0,h='';L.forEach(function(x){var on=got[x[0]];if(on)n++;h+='<span class="badge'+(on?' on':'')+'">'+(on?'★ ':'☆ ')+x[1]+'</span>'});bd.innerHTML='<div class="muted" style="width:100%;text-align:center">شاراتك: '+n+' من '+L.length+'</div>'+h}
+window.award=function(id){if(got[id])return;got[id]=1;try{localStorage.setItem('zill_b',JSON.stringify(got))}catch(e){}draw()};
+draw();
+var ci=document.getElementById('ci'),cr=document.getElementById('cr');
+document.getElementById('cb').onclick=function(){
+if(ci.value.trim().toLowerCase()==='login'){cr.innerHTML='<b class="ok">صحيح! الكلمة LOGIN. هذي فكرة التشفير القديمة.</b>';window.award('cipher')}
+else{cr.innerHTML='<span class="no">ليست صحيحة، جرّب مرة ثانية.</span>'}};
+var mr=document.getElementById('mr');
+document.querySelectorAll('[data-m]').forEach(function(bt){bt.onclick=function(){
+if(bt.getAttribute('data-m')==='1'){mr.innerHTML='<b class="ok">صح! استُبدل حرف l بالرقم 1. التفاصيل الصغيرة هي مصيدة المحتالين.</b>';window.award('mail')}
+else{mr.innerHTML='<span class="no">هذا عنوان سليم، دقق أكثر في كل حرف.</span>'}}});
+})();
+</script>
+</body>
+</html>
